@@ -19,7 +19,7 @@ const githubSlice = createSlice({
     reducers: {
         addFavourite: (state, action: PayloadAction<string>) => {
             state.favourites.push(action.payload)
-            localStorage.setItem(LS.favouriteKey, JSON.stringify(action.payload))
+            localStorage.setItem(LS.favouriteKey, JSON.stringify(state.favourites))
         },
         removeFavourite: (state, action: PayloadAction<string>) => {
             state.favourites = state.favourites.filter(u => u !== action.payload)

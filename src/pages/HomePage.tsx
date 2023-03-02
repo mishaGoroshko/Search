@@ -4,7 +4,7 @@ import {useDebounce} from '../hooks/debounce';
 import {Repo} from '../components/Repo';
 
 export const HomePage = () => {
-    const [search, setSearch] = useState('qwerty472123')
+    const [search, setSearch] = useState('')
     const [dropdown, setDropdown] = useState(false)
     const debouncedSearch = useDebounce(search)
     const {isLoading, isError, data: users} = useSearchUsersQuery(
